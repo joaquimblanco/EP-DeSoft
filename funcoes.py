@@ -21,8 +21,11 @@ def preenche_frota(dicionario_frota, nome_navio, linha, coluna, orientacao, tama
 
 
 def faz_jogada(tabuleiro, linha, coluna):
-    if tabuleiro[linha, coluna] == 1:
-        tabuleiro[linha, coluna] = 'X'
-    if tabuleiro[linha, coluna] == 0:
-        tabuleiro[linha, coluna] = "-"
+
+    if tabuleiro[linha:coluna] == 1:
+        coluna += 1
+        tabuleiro[linha:coluna] = 'X'
+    if tabuleiro[linha:coluna] == 0:
+        linha += 1
+        tabuleiro[linha:coluna] = "-"
     return tabuleiro 
