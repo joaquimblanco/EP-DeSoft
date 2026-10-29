@@ -26,4 +26,12 @@ def faz_jogada(tabuleiro, linha, coluna):
         tabuleiro[linha][coluna] = 'X'
     if tabuleiro[linha][coluna] == 0:
         tabuleiro[linha][coluna] = "-"
-    return tabuleiro 
+    return tabuleiro
+
+
+def posiciona_frota(dicionario_navio):
+    for navio,lista_posicoes in dicionario_navio.items():
+            tamanho_lista = len(lista_posicoes)
+            for posicao in lista_posicoes:
+                tabuleiro = faz_jogada(tabuleiro, posicao[0], posicao[1])
+    return tabuleiro
