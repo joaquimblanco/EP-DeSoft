@@ -30,8 +30,12 @@ def faz_jogada(tabuleiro, linha, coluna):
 
 
 def posiciona_frota(dicionario_navio):
-    for navio,lista_posicoes in dicionario_navio.items():
-            tamanho_lista = len(lista_posicoes)
-            for posicao in lista_posicoes:
-                tabuleiro = faz_jogada(tabuleiro, posicao[0], posicao[1])
+    tabuleiro = []
+    for indice in range(10):
+        linha = [0] * 10
+        tabuleiro.append(linha)
+    for lista_posicoes in dicionario_navio.values():
+        for posicao_x_y in lista_posicoes:
+            for x,y in posicao_x_y:
+                tabuleiro[x][y] = 1
     return tabuleiro
