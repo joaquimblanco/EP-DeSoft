@@ -41,3 +41,7 @@ def posiciona_frota(dicionario_navio):
 # exercicio 6:
 
 # exercicio 7:
+
+# exercicio 8:
+
+# exercicio 9:
